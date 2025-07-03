@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    width: 220px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .profile img {
+    border-radius: 50%;
+}
+
+/* Overview Cards */
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card.income {
+    border-left: 5px solid green;
+}
+
+.card.expense {
+    border-left: 5px solid red;
+}
+
+.card.saving {
+    border-left: 5px solid yellow;
+}
+
+/* Transaction Table */
+.transaction-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.transaction-table th {
+    background: #f0f0f0;
+}
+
+/* Spending Breakdown */
+.spending-breakdown .bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0;
+    position: relative;
+    height: 25px;
+}
+
+.spending-breakdown .bar span {
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.spending-breakdown .progress {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.progress.food {
+    background: red;
+}
+
+.progress.transport {
+    background: orange;
+}
+
+.progress.bills {
+    background: green;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
